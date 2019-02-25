@@ -1,0 +1,15 @@
+// Place all the styles related to the new controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.box {
+  background-color: #3498DC;
+  padding: 13px;
+  margin: 10px;
+  border-radius: 2px;
+}
+
+#box-container {
+  display: flex;
+  color: white;
+  font-weight: bold;
+}

@@ -1,0 +1,17 @@
+<h1>Result:</h1>
+<div id="result">
+  <% if @validcheck && @check %>
+  <%= "Congrats, #{@word} is a good pick" %>
+  <% elsif @check == false %>
+  <%= "sorry, but word #{@word} cant be build out of #{params[:letters]}" %>
+  <% elsif @validcheck == false %>
+  <%= "sorry, but word #{@word} doesnt seem to be in the dictionary" %>
+  <% end %>
+</div>
+<div id="reset">
+  <%= link_to 'Play Again', '/new' %>
+</div>
+
+<div>
+  <%= "#{session[:score]}" %>
+</div>
