@@ -8,7 +8,7 @@ class GamesController < ApplicationController
     10.times do
       @letters << @pickers.sample
     end
-    session[:score] = 0
+    # session[:score] = 0
   end
 
   def score
@@ -30,7 +30,7 @@ class GamesController < ApplicationController
     my_word.each do |letter|
       @lettercheck.include?(letter) ? @lettercheck = @lettercheck - [letter] : @check = false
     end
-    session[:score] += my_word.length
+    session[:score] += my_word.length if @check
     # if the characters match out, my_word is empty array, @check is true, else
     # @check is false
     # raise
